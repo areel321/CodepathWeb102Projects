@@ -53,7 +53,7 @@ const BarCards = () => {
                         <Bar bar="Nobody's Darling" location="Chicago, IL" img={nobodysdarling} web="https://www.nobodysdarlingbar.com/"/>
                         </td>
                         <td>
-                        <Bar bar="Scarlet Fox Wine Bar" location="San Francisco, CA" img={scarletfox} web="https://scarletfoxsf.com/"/>
+                        <Bar bar="Scarlet Fox" location="San Francisco, CA" img={scarletfox} web="https://scarletfoxsf.com/"/>
                         </td>
                         <td>
                         <Bar bar="The Ruby Fruit" location="Los Angeles, CA" img={therubyfruit} web="https://www.therubyfruit.com/"/>
