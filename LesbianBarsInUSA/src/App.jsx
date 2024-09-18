@@ -1,6 +1,6 @@
 import './App.css';
-import BarCards from './components/BarCards';
 import rainbowHeart from './assets/rainbowHeart.jpg';
+import BarCards from './components/barCards';
 
 function App() {
   
@@ -15,8 +15,7 @@ function App() {
           <h2>Let's find our community❤️</h2>
         </div>
       </div>
-    <BarCards />
-
+      <BarCards />
     </div>
     
   )
