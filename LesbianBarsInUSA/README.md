@@ -1,8 +1,8 @@
-# Web Development Project 1 - *Name of App Here*
+# Web Development Project 1 - *Lesbian Bars in the USA*
 
-Submitted by: **Your Name Here**
+Submitted by: **Allison Reel**
 
-This web app: **insert description**
+This web app: **acts as a database for LGBTQ+ people to easily find lesbian bars in the United States (which are dwindling in number) in order to foster community and a sense of belonging**
 
 Time spent: **X** hours spent in total
 
@@ -29,7 +29,7 @@ Here's a walkthrough of implemented required features:
 <img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 <!-- Replace this with whatever GIF tool you used! -->
-GIF created with ...  
+GIF created with ...  LICEcap
 <!-- Recommended tools:
 [Kap](https://getkap.co/) for macOS
 [ScreenToGif](https://www.screentogif.com/) for Windows
