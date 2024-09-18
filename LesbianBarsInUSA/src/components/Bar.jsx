@@ -2,8 +2,11 @@ import React from "react";
 
 const Bar = (props) => {
     return (
-        <td className={"Bar " + props.color}>
-            <h5>{props.event}</h5>
+        <td className={"Bar " + props.bar}>
+            <img src={props.img}/>
+            <h5>{props.bar}</h5>
+            <h6>{props.location}</h6>
+            <a href={props.web}><button>Website</button></a>
         </td>
     )
 }

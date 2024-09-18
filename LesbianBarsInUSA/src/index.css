@@ -1,27 +1,43 @@
 :root{
   background-color: lavenderblush;
   text-rendering: optimizeLegibility;
- 
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
 }
 
-.Event {
-  width: 100px;
+.Bar {
+  width: 300px;
+  background-color: lightcoral;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: top;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
-.Event h6, h5 {
+.Bar h6, h5 {
   line-height: 0px;
   align-content: center;
+  margin: 20px;
 }
 
-.pink {
-  background: pink;
+.Bar h5 {
+  font-size: 30px;
 }
 
-.blue {
-  background: rgb(190, 219, 229);
+.Bar button {
+  background-color:aliceblue;
+  color: grey;
+  border-radius: 40px;
+  margin: 20px;
+  font-size: 20px;
+  
 }
 
-.green {
-  background: rgb(202, 245, 222);
-} 
+.Bar img {
+  height: 300px;
+  max-width: 90%;
+}
+
 
