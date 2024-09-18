@@ -11,9 +11,10 @@
   border-radius: 10px;
   display: flex;
   flex-direction: column;
-  justify-content: top;
+  justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+
 }
 
 .Bar h6, h5 {
