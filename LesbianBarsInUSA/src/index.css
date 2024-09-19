@@ -13,7 +13,6 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
 
 }
 
@@ -33,12 +32,40 @@
   border-radius: 40px;
   margin: 20px;
   font-size: 20px;
+  width: 150px;
   
+}
+
+.Bar button:hover {
+  cursor: pointer;
+  border-color: lavenderblush;
+  border: 10px;
 }
 
 .Bar img {
   height: 300px;
   max-width: 90%;
+  
 }
+
+.BarCards {
+  overflow-x: auto;
+}
+
+.BarCards tr,
+td {
+  white-space: nonwrap;
+}
+
+.BarCards tr {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+
+
+
 
 

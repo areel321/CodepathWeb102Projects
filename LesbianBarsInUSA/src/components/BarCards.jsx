@@ -33,8 +33,7 @@ const BarCards = () => {
                         <td>
                         <Bar bar="Dorothy" location="Chicago, IL" img={dorothys} web="https://www.dorothydownstairs.com/hello"/>
                         </td>  
-                    </tr>
-                    <tr>
+                    
                         <td>
                         <Bar bar="Femme" location="Worcester, MA" img={femme} web="https://www.femmebarworcester.com/"/>
                         </td>
@@ -47,8 +46,7 @@ const BarCards = () => {
                         <td>
                         <Bar bar="Jolene's" location="San Francisco, CA" img={jolenes} web="https://www.jolenessf.com/"/>
                         </td>  
-                    </tr>
-                    <tr>
+                    
                         <td>
                         <Bar bar="Nobody's Darling" location="Chicago, IL" img={nobodysdarling} web="https://www.nobodysdarlingbar.com/"/>
                         </td>
