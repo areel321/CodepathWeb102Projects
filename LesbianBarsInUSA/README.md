@@ -4,7 +4,7 @@ Submitted by: **Allison Reel**
 
 This web app: **acts as a database for LGBTQ+ people to easily find lesbian bars in the United States (which are dwindling in number) in order to foster community and a sense of belonging**
 
-Time spent: **X** hours spent in total
+Time spent: **3** hours spent in total
 
 ## Required Features
 
