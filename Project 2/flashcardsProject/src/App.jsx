@@ -1,33 +1,61 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from 'react';
+import './App.css';
+import Flashcard from './flashcard.jsx';
+
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [index, setIndex] = useState(0)
+  const handleNext = () => {
+    setIndex(Math.floor(Math.random() * flashcards.length));
+  };
+  
+  const flashcards = [
+    {front: 'je',
+      back: 'i',
+      difficulty: 'easy',
+    }, 
+    {front: 'tu',
+      back: 'you (informal or singular)',
+      difficulty: 'easy',
+    },
+    {front: 'nous',
+      back: 'we',
+      difficulty: 'medium',
+    },
+    {front: 'vous',
+      back: 'you (formal or plural)',
+      difficulty: 'medium',
+    },
+    {front: 'elle',
+      back: 'she',
+      difficulty: 'hard',
+    },
+    {front: 'il',
+      back: 'he',
+      difficulty: 'hard',
+    },
+    {front: 'on',
+      back: 'one or people',
+      difficulty: 'hard',
+    },
+  ]
+
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div class="header">
+      <h1>French Pronouns</h1>
+      <p>Flashcard set of French pronouns to English pronouns</p>
+      <p>7 cards in set, colors indicate difficulty level</p>
+    </div>
+    <div class="flashcards">
+
+      <Flashcard flashcards={flashcards} index={index}/>
+      <div class="buttons">
+        <button onClick={handleNext}>Next</button>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+
+    </div>
     </>
   )
 }
