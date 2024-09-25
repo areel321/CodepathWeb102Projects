@@ -2,9 +2,9 @@
 
 Submitted by: **Allison ReelYour Name Here**
 
-This web app: **insert description**
+This web app: **includes 7 flashcards for French to English pronouns studying**
 
-Time spent: **X** hours spent in total
+Time spent: **2** hours spent in total
 
 ## Required Features
 
