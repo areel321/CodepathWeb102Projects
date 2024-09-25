@@ -1,6 +1,6 @@
 # Web Development Project 2 - *Name of App Here*
 
-Submitted by: **Allison ReelYour Name Here**
+Submitted by: **Allison Reel**
 
 This web app: **includes 7 flashcards for French to English pronouns studying**
 
