@@ -6,37 +6,34 @@ import Flashcard from './flashcard.jsx';
 function App() {
   const [index, setIndex] = useState(0)
   const handleNext = () => {
-    setIndex(Math.floor(Math.random() * flashcards.length));
+    
+    setIndex((index) => (index + 1) % flashcards.length);
+  };
+  const handleBack = () => {
+    setIndex((index) => (index - 1 + flashcards.length) % flashcards.length);
   };
   
   const flashcards = [
     {front: 'je',
       back: 'i',
-      difficulty: 'easy',
     }, 
     {front: 'tu',
       back: 'you (informal or singular)',
-      difficulty: 'easy',
     },
     {front: 'nous',
       back: 'we',
-      difficulty: 'medium',
     },
     {front: 'vous',
       back: 'you (formal or plural)',
-      difficulty: 'medium',
     },
     {front: 'elle',
       back: 'she',
-      difficulty: 'hard',
     },
     {front: 'il',
       back: 'he',
-      difficulty: 'hard',
     },
     {front: 'on',
       back: 'one or people',
-      difficulty: 'hard',
     },
   ]
 
@@ -52,7 +49,9 @@ function App() {
 
       <Flashcard flashcards={flashcards} index={index}/>
       <div class="buttons">
+        <button onClick={handleBack}>Back</button>
         <button onClick={handleNext}>Next</button>
+        
       </div>
 
     </div>

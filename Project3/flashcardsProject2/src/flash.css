@@ -4,23 +4,12 @@
     
   }
 
-  .easy {
-    background-color: lightgreen;
-    border-radius: 10px;
-    height:100px;
-  }
-  
-  .medium {
-    background-color: lightsalmon;
-    border-radius: 10px;
-    height:100px;
-  }
-
   .hard {
     background-color: lightcoral;
     border-radius: 10px;
     height:100px;
-  }
+
+
 
 
   .flashcard-content {
