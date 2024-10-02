@@ -62,13 +62,14 @@ function App() {
       setResultColor({ borderColor: 'green' }); 
       setStreak((streak) => streak + 1);
       if (streak >= longestStreak){
-        setLongestStreak(streak);
+        setLongestStreak((longestStreak) => streak + 1 );
       }
 
     } else {
       setResultColor({ borderColor: 'red' }); 
       setStreak(0);
     }
+    
   };
 
   const handleShuffle = () => {
