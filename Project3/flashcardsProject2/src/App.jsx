@@ -86,11 +86,7 @@ function App() {
       setCards(flashcards); 
       setIndex(0); 
     }
-
   }
-
-  
-  
 
 
   return (
