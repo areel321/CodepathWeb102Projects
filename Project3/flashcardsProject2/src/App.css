@@ -25,3 +25,7 @@ button {
   justify-content: space-evenly;
   flex-wrap: wrap;
 }
+
+input {
+  border-width: 5px;
+}
