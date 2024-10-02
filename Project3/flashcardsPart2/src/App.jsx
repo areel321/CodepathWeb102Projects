@@ -41,6 +41,7 @@ function App() {
   const [shuffle, setShuffle] = useState(false);
   const [cards, setCards] = useState(flashcards);
   const [streak, setStreak] = useState(0);
+  const [longestStreak, setLongestStreak] = useState(0);
 
   const handleNext = () => {
     resetInput();
@@ -60,6 +61,10 @@ function App() {
     if (answer === flashcards[index].back) {
       setResultColor({ borderColor: 'green' }); 
       setStreak((streak) => streak + 1);
+      if (streak >= longestStreak){
+        setLongestStreak(streak);
+      }
+
     } else {
       setResultColor({ borderColor: 'red' }); 
       setStreak(0);
@@ -87,6 +92,7 @@ function App() {
       setIndex(0); 
     }
   }
+
 
 
   return (
@@ -117,6 +123,7 @@ function App() {
       </div>
       <div>
         <h3>Current Streak: {streak} </h3>
+        <h3>Longest Streak: {longestStreak}</h3>
       </div>
 
     </div>
