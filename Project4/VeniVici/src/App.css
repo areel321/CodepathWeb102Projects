@@ -1,0 +1,46 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.body {
+  display: flex;
+  height: 100vh;
+  justify-content: space-between;
+}
+
+.main {
+  flex: 3;
+}
+
+.ban {
+  flex: 1;
+  background-color: grey;
+}
+
+.attributes button {
+  color: white;
+  background-color: #ff6b6b; 
+  border-radius: 3px;
+}
+
+button {
+  padding: 15px 30px;
+  margin: 5px;
+  font-size: 18px;
+  color: grey;
+  background-color: pink; 
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: transform 0.3s, background-color 0.3s;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden; 
+}
+
+button:hover {
+  background-color: #ff4b4b; 
+  transform: translateY(-5px);
+}
