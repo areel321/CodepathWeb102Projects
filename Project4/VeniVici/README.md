@@ -1,4 +1,4 @@
-# Web Development Project 4 - *Hardvard Artwork Randomizer*
+# Web Development Project 4 - *Harvard Artwork Randomizer*
 
 Submitted by: **Allison Reel**
 
