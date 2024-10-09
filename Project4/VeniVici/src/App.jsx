@@ -15,12 +15,13 @@ function App() {
           // Fetch a random post from JSONPlaceholder API
           const response = await fetch(`https://api.harvardartmuseums.org/object?classification=Paintings&&apikey=${ACCESS_KEY}`);
           const post = await response.json();
+          let random = Math.floor(Math.random() * post.records.length)
 
           // Check if the fetched post's userId is in the ban list
-          if (banList.includes(post.userId)) {
+          if (banList.includes(post.records[random].people[0].name) || banList.includes(post.records[random].dated) || banList.includes(post.records[random].people[0].culture)) {
               fetchData(); // Fetch again if the item is banned
           } else {
-              setData(post.records[Math.floor(Math.random() * post.records.length)]);
+              setData(post.records[random]);
           }
       } catch (error) {
           console.error('Error fetching data:', error);
@@ -47,20 +48,18 @@ function App() {
         <div className='main'>
         <h1>Artwork Randomizer</h1>
         <p>Select an element attribute to no longer see objects of it</p>
-        
+        <button onClick={fetchData} disabled={loading}>{loading ? 'Loading...' : 'Something new!'}</button>
         {data && (
           <div className='element'>
             <h2>{data.title}</h2>
             <div className='attributes'>
-              <button onClick={() => addToBanList(data.pages)}>{data.copyright}</button>
-              <button onClick={() => addToBanList(data.date)}>{data.totalpageviews}</button>
-              <button onClick={() => addToBanList(data.caption)}>{data.lastupdate}</button>
+              <button onClick={() => addToBanList(data.people[0].name)}>{data.people[0].name}</button>
+              <button onClick={() => addToBanList(data.dated)}>{data.dated}</button>
+              <button onClick={() => addToBanList(data.people[0].culture)}>{data.people[0].culture ? data.people[0].culture : 'Not available'}</button>
             </div>
-            <img src={data.primaryimageurl}/> 
+            <img src={data.primaryimageurl} alt='image unavailable'/> 
           </div>
         )}
-
-          <button onClick={fetchData} disabled={loading}>{loading ? 'Loading...' : 'Something new!'}</button>
         </div>
 
         {banList.length > 0 && (
