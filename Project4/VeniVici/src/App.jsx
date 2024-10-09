@@ -37,6 +37,10 @@ function App() {
       }
   };
 
+  const removeFromBanList = (value) => {
+    setBanList((prevBanList) => prevBanList.filter((ban) => ban !== value));
+  };
+
   // UseEffect to fetch initial data
   useEffect(() => {
       fetchData();
@@ -67,7 +71,7 @@ function App() {
             <h2>banned attributes</h2>
             <ul>
              {banList.map((ban, index) => (
-                <li key={index}> {ban}</li>
+                <li key={index} onClick= {() => removeFromBanList(ban)}> {ban}</li>
               ))}
             </ul>
           </div> 
