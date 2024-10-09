@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 const ACCESS_KEY = import.meta.env.VITE_APP_ACCESS_KEY;
 import './App.css';
 
@@ -13,14 +13,14 @@ function App() {
       setLoading(true);
       try {
           // Fetch a random post from JSONPlaceholder API
-          const response = await fetch(`https://jsonplaceholder.typicode.com/posts/${Math.floor(Math.random() * 100) + 1}`);
+          const response = await fetch(`https://api.harvardartmuseums.org/object?classification=Paintings&&apikey=${ACCESS_KEY}`);
           const post = await response.json();
 
           // Check if the fetched post's userId is in the ban list
           if (banList.includes(post.userId)) {
               fetchData(); // Fetch again if the item is banned
           } else {
-              setData(post);
+              setData(post.records[Math.floor(Math.random() * post.records.length)]);
           }
       } catch (error) {
           console.error('Error fetching data:', error);
@@ -46,16 +46,17 @@ function App() {
       <div className='body'>
         <div className='main'>
         <h1>Artwork Randomizer</h1>
+        <p>Select an element attribute to no longer see objects of it</p>
         
         {data && (
           <div className='element'>
-            <h2>Name here</h2>
+            <h2>{data.title}</h2>
             <div className='attributes'>
-              <button onClick={() => addToBanList(data.title)}>{data.title}</button>
-              <button onClick={() => addToBanList(data.userId)}>{data.userId}</button>
-              <button onClick={() => addToBanList(data.body)}>{data.body}</button>
+              <button onClick={() => addToBanList(data.pages)}>{data.copyright}</button>
+              <button onClick={() => addToBanList(data.date)}>{data.totalpageviews}</button>
+              <button onClick={() => addToBanList(data.caption)}>{data.lastupdate}</button>
             </div>
-            <img></img> 
+            <img src={data.primaryimageurl}/> 
           </div>
         )}
 
@@ -67,7 +68,7 @@ function App() {
             <h2>banned attributes</h2>
             <ul>
              {banList.map((ban, index) => (
-                <li key={index}>User ID {ban}</li>
+                <li key={index}> {ban}</li>
               ))}
             </ul>
           </div> 

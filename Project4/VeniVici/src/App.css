@@ -44,3 +44,8 @@ button:hover {
   background-color: #ff4b4b; 
   transform: translateY(-5px);
 }
+
+img {
+  width: 100px;
+  height: 100%;
+}
