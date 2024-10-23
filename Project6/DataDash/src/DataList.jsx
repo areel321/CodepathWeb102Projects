@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 
 const DataList = ({ data }) => {
   if (data.length === 0) {
@@ -17,6 +18,7 @@ const DataList = ({ data }) => {
             <th>City</th>
             <th>State</th>
             <th>Address</th>
+            <th>Detail</th>
           </tr>
         </thead>
         <tbody>
@@ -28,6 +30,13 @@ const DataList = ({ data }) => {
               <td>{item.city}</td>
               <td>{item.state}</td>
               <td>{item.address_1}</td>
+              <td><Link
+                  style={{ color: "White" }}
+                  to={`/breweryDetails/${item.name}`}
+                  
+                >
+                  View Details
+                </Link></td>
             </tr>
           ))}
         </tbody>

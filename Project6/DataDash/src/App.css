@@ -30,5 +30,18 @@ tr:hover {
   background-color: darkkhaki;
 }
 
+nav {
+  position: fixed; 
+  top: 0; 
+  right: 0; 
+}
+
+.home-link 
+{
+  border:1px dotted white;
+  background:darkkhaki;
+  width:75px;
+  list-style-type: none; /* Remove bullets */
+}
 
 

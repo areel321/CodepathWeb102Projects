@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import DataList from './DataList';
 import beerMug from './assets/beer-mug-graphic-clipart-design-free-png.webp'
 import './App.css';
+const API_KEY = import.meta.env.VITE_APP_API_KEY;
+import Dashboard from './Dashboard';
 
 const App = () => {
   const [data, setData] = useState([]);
@@ -51,14 +53,11 @@ const App = () => {
     (item.state.toLowerCase().includes(stateSearchTerm.toLowerCase()) || stateSearchTerm === '')
   );
 
-  const uniqueStates = [...new Set(data.map(item => item.state))].length;
-  const uniqueCities = [...new Set(data.map(item => item.city))].length;
   
 
   return (
     <div>
-      <h1>Data Dashboard</h1>
-      <img className="img" src={beerMug}/>
+      <Dashboard/>
       {loading ? (
         <p>Loading data...</p>
       ) : (
@@ -86,9 +85,6 @@ const App = () => {
               onChange={handleStateSearch}
             />
           </div>
-          <h3>Total Breweries: {data.length}</h3>
-          <h3>States Represented: {uniqueStates}</h3>
-          <h3>Cities Represented: {uniqueCities}</h3>
           <DataList data={filteredData.filter(item => item.name.toLowerCase().includes(searchTerm.toLowerCase()))} />
         </>
       )}
