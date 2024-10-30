@@ -23,9 +23,31 @@ const CrewmateList = () => {
     fetchCrewmates();
   };
 
+  const calculatePercentages = () => {
+    const total = crewmates.length;
+    const attributeCounts = crewmates.reduce((acc, { attribute }) => {
+      acc[attribute] = (acc[attribute] || 0) + 1;
+      return acc;
+    }, {});
+
+    return Object.entries(attributeCounts).map(([attribute, count]) => ({
+      attribute,
+      percentage: ((count / total) * 100).toFixed(2),
+    }));
+  };
+  
   return (
     <div>
       <h2>Crewmate List</h2>
+      <h3>Total Crewmates: {crewmates.length}</h3>
+      <h4>Attribute Percentages:</h4>
+          <ul>
+            {calculatePercentages().map(({ attribute, percentage }) => (
+              <li key={attribute}>
+                {attribute}: {percentage}%
+              </li>
+            ))}
+          </ul>
       <Link to="/add">Add Crewmate</Link>
       <ul>
         {crewmates.map((crewmate) => (

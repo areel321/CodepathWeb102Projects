@@ -1,26 +1,26 @@
-# Web Development Project 7 - *Name of App Here*
+# Web Development Project 7 - *crewmates*
 
-Submitted by: **Your Name Here**
+Submitted by: **Allison Reel**
 
-This web app: **insert description**
+This web app: **contains a list of crewmates that can be added, edited, and deleted**
 
-Time spent: **X** hours spent in total
+Time spent: **2** hours spent in total
 
 ## Required Features
 
 The following **required** functionality is completed:
 
-- [ ] **A create form allows users to add new cremates**
-- [ ] **Users can name the crewmate and set the crewmate's attributes by clicking on one of several values**
-- [ ] **The site displays a summary page of all the user's added crewmates**
-- [ ] **A previously created crewmate can be updated from the crewmate list**
-- [ ] **A previously created crewmate can be deleted from the crewmate list**
-- [ ] **Each crewmate has a direct, unique link to an info page about them**
+- [X] **A create form allows users to add new cremates**
+- [X] **Users can name the crewmate and set the crewmate's attributes by clicking on one of several values**
+- [X] **The site displays a summary page of all the user's added crewmates**
+- [X] **A previously created crewmate can be updated from the crewmate list**
+- [X]] **A previously created crewmate can be deleted from the crewmate list**
+- [X] **Each crewmate has a direct, unique link to an info page about them**
 
 The following **optional** features are implemented:
 
 - [ ] A crewmate can be given a category upon creation which restricts their attributes
-- [ ] The site displays summary statistics about a user's crew on their crew page 
+- [X] The site displays summary statistics about a user's crew on their crew page 
 - [ ] The site displays a custom "success" metric about a user's crew which changes the look of the crewmate list
 
 The following **additional** features are implemented:
@@ -31,10 +31,10 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='./walkthrough_project7.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 <!-- Replace this with whatever GIF tool you used! -->
-GIF created with ...  
+GIF created with ...  LICEcap
 <!-- Recommended tools:
 [Kap](https://getkap.co/) for macOS
 [ScreenToGif](https://www.screentogif.com/) for Windows
