@@ -14,7 +14,7 @@ The following **required** functionality is completed:
 - [X] **Users can name the crewmate and set the crewmate's attributes by clicking on one of several values**
 - [X] **The site displays a summary page of all the user's added crewmates**
 - [X] **A previously created crewmate can be updated from the crewmate list**
-- [X]] **A previously created crewmate can be deleted from the crewmate list**
+- [X] **A previously created crewmate can be deleted from the crewmate list**
 - [X] **Each crewmate has a direct, unique link to an info page about them**
 
 The following **optional** features are implemented:
