@@ -1,0 +1,59 @@
+/* CrewmateList.css */
+
+.list-container {
+    max-width: 600px;  /* Set a maximum width for the list */
+    margin: 20px auto; /* Center the list horizontally */
+    padding: 20px;     /* Add padding around the list */
+    border: 1px solid #ccc; /* Add a border */
+    border-radius: 5px; /* Round the corners */
+    background-color: #f9f9f9; /* Light background color */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  }
+  
+  h2 {
+    text-align: center; /* Center the heading */
+    color: #333; /* Dark text color */
+  }
+  
+  ul {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0;           /* Remove padding */
+    margin: 0;            /* Remove margin */
+  }
+  
+  li {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space items evenly */
+    align-items: column; /* Center items vertically */
+    padding: 10px; /* Padding inside each list item */
+    border-bottom: 1px solid #ccc; /* Bottom border for separation */
+    background-color: aliceblue;
+    
+  }
+  
+  li:last-child {
+    border-bottom: none; /* Remove bottom border from last item */
+  }
+  
+  button {
+    background-color: #e74c3c; /* Red background for delete button */
+    color: white; /* White text */
+    border: none; /* No border */
+    padding: 5px 10px; /* Padding inside button */
+    border-radius: 4px; /* Round corners */
+    cursor: pointer; /* Pointer cursor on hover */
+  }
+  
+  button:hover {
+    background-color: #c0392b; /* Darker red on hover */
+  }
+  
+  .edit-button {
+    background-color: #3498db; /* Blue background for edit button */
+    margin-left: 10px; /* Space between buttons */
+  }
+  
+  .edit-button:hover {
+    background-color: #2980b9; /* Darker blue on hover */
+  }
+  

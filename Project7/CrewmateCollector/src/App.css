@@ -1,0 +1,34 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+/* App.css */
+
+.app-container {
+  display: flex;                /* Use Flexbox */
+  flex-direction: column;      /* Stack items vertically */
+  align-items: center;         /* Center items horizontally */
+  justify-content: flex-start;  /* Align items to the top */
+  min-height: 100vh;           /* Full height of the viewport */
+  padding: 20px;               /* Padding around the container */
+  background-color: #f0f0f0;  /* Light background color for the app */
+}
+
+nav {
+  margin-bottom: 20px;         /* Space below the navigation */
+  padding: 5px;
+  border-width: 5px;
+  background-color: pink;
+}
+
+.link {
+  padding: 5px;
+}
+
+h1 {
+  margin-bottom: 20px;         /* Space below the main heading */
+  color: #333;                 /* Dark text color */
+}
