@@ -1,18 +1,19 @@
 // src/components/CreatePost.js
 import { useState } from 'react';
 import { supabase } from '../supabaseClient';
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';  // <-- Import useNavigate from react-router-dom
+
 
 const CreatePost = ({ userId }) => {
   const [title, setTitle] = useState('');
   const [content, setContent] = useState('');
   const [imageUrl, setImageUrl] = useState('');
   const [secretKey, setSecretKey] = useState('');
-  const history = useHistory();
+  const navigate = useNavigate();  // <-- Use useNavigate to navigate to a new page
 
   const handleCreatePost = async (e) => {
-    e.preventDefault();
-    
+    e.preventDefault();  // <-- Prevent the default form submission behavior
+
     const { data, error } = await supabase
       .from('posts')
       .insert([
@@ -28,7 +29,8 @@ const CreatePost = ({ userId }) => {
     if (error) {
       console.error('Error creating post:', error);
     } else {
-      history.push(`/post/${data[0].id}`);
+      // Use navigate to go to the newly created post page
+      navigate(`/`);
     }
   };
 
