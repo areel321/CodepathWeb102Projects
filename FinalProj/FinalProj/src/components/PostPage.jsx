@@ -68,7 +68,7 @@ const PostPage = () => {
     if (error) {
       console.error('Error adding comment:', error);
     } else {
-      setComments([...comments, data[0]]);
+      setComments([...comments, data[0]]);  // Add the new comment to state
       setNewComment('');  // Clear input field
     }
   };
@@ -114,6 +114,11 @@ const PostPage = () => {
       <h1>{post.title}</h1>
       <p>{post.content}</p>
       <p>Posted on: {new Date(post.created_at).toLocaleString()}</p>
+      {post.image_url ? (
+        <img src={post.image_url} alt={post.title} className="post-image" />
+      ) : (
+        <img src="/default-image.png" alt="Default" className="post-image" />
+      )}
 
       {editing ? (
         <form onSubmit={handleEditPost}>
@@ -148,15 +153,22 @@ const PostPage = () => {
         <button type="submit">Post Comment</button>
       </form>
 
-      <ul>
-        {comments.map((comment) => (
-          <li key={comment.id}>
-            <p>{comment.content}</p>
-          </li>
-        ))}
-      </ul>
+      <div className="comments-list">
+        {comments.length === 0 ? (
+          <p>No comments yet. Be the first to comment!</p>
+        ) : (
+          <ul>
+            {comments.map((comment) => (
+              <li key={comment.id}>
+                <p>{comment.content}</p>
+              </li>
+            ))}
+          </ul>
+        )}
+      </div>
     </div>
   );
 };
 
 export default PostPage;
+
