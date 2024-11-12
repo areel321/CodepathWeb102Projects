@@ -126,6 +126,7 @@ const PostPage = () => {
       <h1>{post.title}</h1>
       <p>{post.content}</p>
       <p>Posted on: {new Date(post.created_at).toLocaleString()}</p>
+      <p>Posted by: {post.user_id}</p>
       {post.image_url ? (
         <img src={post.image_url} alt={post.title} className="post-image" />
       ) : (
