@@ -4,7 +4,7 @@ Submitted by: **Allison Reel**
 
 This web app: **allows visitors to create posts, edit posts, delete posts, comment on posts, and upvote posts**
 
-Time spent: **X** hours spent in total
+Time spent: **5** hours spent in total
 
 ## Required Features
 
@@ -24,8 +24,8 @@ The following **required** functionality is completed:
 
 The following **optional** features are implemented:
 
-- [ ] Users can only edit and deleted posts or delete comments by entering the secret key, which is set by the user during post creation
-- [ ] Upon launching the web app, the user is assigned a random user ID. It will be associated with all posts and comments that they make and displayed on them.
+- [X] Users can only edit and deleted posts or delete comments by entering the secret key, which is set by the user during post creation
+- [X] Upon launching the web app, the user is assigned a random user ID. It will be associated with all posts and comments that they make and displayed on them.
 - [ ] Users can repost a previous post by referencing its post ID. On the post page of the new post, the referenced post is displayed and linked, creating a thread
 - [ ] Users can customize the interface of the web app
 - [ ] Users can share and view web videos

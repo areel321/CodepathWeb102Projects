@@ -12,6 +12,9 @@ const PostPage = () => {
   const [editing, setEditing] = useState(false);  // State to toggle edit mode
   const [editedTitle, setEditedTitle] = useState('');
   const [editedContent, setEditedContent] = useState('');
+  const [secretKey, setSecretKey] = useState(''); // State for the secret key input
+  const [isKeyValid, setIsKeyValid] = useState(false); // Whether the entered key is valid
+
 
   // Fetch post and comments data on page load
   useEffect(() => {
@@ -105,6 +108,15 @@ const PostPage = () => {
     }
   };
 
+  // Handle secret key validation
+  const handleKeySubmit = () => {
+    if (secretKey === post.secret_key) {
+      setIsKeyValid(true);  // If the key is correct, enable editing and deleting
+    } else {
+      setIsKeyValid(false);  // If the key is incorrect, show error
+    }
+  };
+
   if (!post) {
     return <div>Loading...</div>;  // Loading state if post is still being fetched
   }
@@ -120,28 +132,46 @@ const PostPage = () => {
         <img src="/default-image.png" alt="Default" className="post-image" />
       )}
 
-      {editing ? (
-        <form onSubmit={handleEditPost}>
-          <input
-            type="text"
-            value={editedTitle}
-            onChange={(e) => setEditedTitle(e.target.value)}
-            required
-          />
-          <textarea
-            value={editedContent}
-            onChange={(e) => setEditedContent(e.target.value)}
-            required
-          />
-          <button type="submit">Save Changes</button>
-          <button type="button" onClick={() => setEditing(false)}>Cancel</button>
-        </form>
-      ) : (
-        <div>
-          <button onClick={() => setEditing(true)}>Edit Post</button>
-          <button onClick={handleDeletePost}>Delete Post</button>
-        </div>
-      )}
+      {/* Secret key input for edit/delete actions */}
+      <div>
+        {!isKeyValid ? (
+          <div>
+            <input
+              type="password"
+              placeholder="Enter Secret Key"
+              value={secretKey}
+              onChange={(e) => setSecretKey(e.target.value)}
+            />
+            <button onClick={handleKeySubmit}>Submit Key</button>
+          </div>
+        ) : (
+          <div>
+            {/* If the key is valid, show the edit and delete buttons */}
+            {editing ? (
+              <form onSubmit={handleEditPost}>
+                <input
+                  type="text"
+                  value={editedTitle}
+                  onChange={(e) => setEditedTitle(e.target.value)}
+                  required
+                />
+                <textarea
+                  value={editedContent}
+                  onChange={(e) => setEditedContent(e.target.value)}
+                  required
+                />
+                <button type="submit">Save Changes</button>
+                <button type="button" onClick={() => setEditing(false)}>Cancel</button>
+              </form>
+            ) : (
+              <div>
+                <button onClick={() => setEditing(true)}>Edit Post</button>
+                <button onClick={handleDeletePost}>Delete Post</button>
+              </div>
+            )}
+          </div>
+        )}
+      </div>
 
       <h3>Comments</h3>
       <form onSubmit={handleAddComment}>
@@ -171,4 +201,3 @@ const PostPage = () => {
 };
 
 export default PostPage;
-
